@@ -16,7 +16,7 @@ weightedTraits = {}
 
 # Create weighted traits dictionary
 for trait in traits:
-    traitFiles = os.listdir(os.path.dirname(os.path.realpath(__file__)) + "\\traits\\" + trait)
+    traitFiles = os.listdir(os.path.dirname(os.path.realpath(__file__)) + "//traits//" + trait)
 
     possibleOutput = possibleOutput * len(traitFiles)
 
@@ -88,7 +88,7 @@ while outputCount < imageCount:
         traitChoice = random.choice(weightedTraits[trait])[0]
         outputString += traitChoice
 
-        layerFiles[trait] = Image.open(os.path.dirname(os.path.realpath(__file__)) + "\\traits\\" + trait + "\\" + traitChoice)
+        layerFiles[trait] = Image.open(os.path.dirname(os.path.realpath(__file__)) + "//traits//" + trait + "//" + traitChoice)
         layerFiles[trait] = layerFiles[trait].convert("RGBA")
 
         traitChoiceSplit = traitChoice.split("#")
@@ -111,11 +111,11 @@ while outputCount < imageCount:
                 output.paste(layerFiles[trait], (0,0), mask = layerFiles[trait])
 
         # Save image
-        output.save(os.path.dirname(os.path.realpath(__file__)) + "\\output\\" + str(outputCount) + ".png","PNG")
+        output.save(os.path.dirname(os.path.realpath(__file__)) + "//output//" + str(outputCount) + ".png","PNG")
 
         # Save metadata
         jsonString = json.dumps(metadataDict, indent = 4) 
-        textFile = open(os.path.dirname(os.path.realpath(__file__)) + "\\output\\" + str(outputCount) + ".json", "w")
+        textFile = open(os.path.dirname(os.path.realpath(__file__)) + "//output//" + str(outputCount) + ".json", "w")
         textFile.write(jsonString)
         textFile.close()
 
@@ -130,6 +130,6 @@ while outputCount < imageCount:
 
 # Save overall metadata
 jsonString = json.dumps(totalMetadata, indent = 4) 
-textFile = open(os.path.dirname(os.path.realpath(__file__)) + "\\output\\_metadata.json", "w")
+textFile = open(os.path.dirname(os.path.realpath(__file__)) + "//output//_metadata.json", "w")
 textFile.write(jsonString)
 textFile.close()
