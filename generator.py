@@ -43,10 +43,10 @@ completedOutput = []
 outputCount = 0
 
 # Check the blockchain being used
-if blockchain.upper() == "SOL":
-    devAddress = "Cp4qLAgcAoNgg6aH1scCiVVH48iNjtTikiQMsiSztcCm"
+if blockchain.upper() == "SIGNUM":
+    devAddress = ""
 else:
-    devAddress = "0xfa1db77200f3Ca7B9171b2c362484a1A1374243d"
+    devAddress = ""
 
 # While more images need to be generated
 while outputCount < imageCount:
