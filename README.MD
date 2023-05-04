@@ -1,4 +1,4 @@
-**NFT-Generator** is the best way to generate thousands of NFTs quick and easily with Python. Just add your files, set your configuration and run the script. You'll get all the images and metadata required for your NFT project!
+**NFT-Generator** is the best way to generate thousands of NFTs quick and easily with Python. Just add your files, set your configuration and run the script. You'll get all the images and metadata required for your NFT project on Signum!
 
 ## How to use?
 1. Clone the repo by running `git clone https://github.com/itshydrone/NFT-Generator.git`
